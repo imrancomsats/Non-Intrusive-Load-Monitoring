@@ -79,49 +79,6 @@ for n, i in enumerate(y_test):
   if i == 2:
     y_test[n] = 0
 
-scaling = MinMaxScaler(feature_range=(-1,1)).fit(X_train)
-X_train1 = scaling.transform(X_train)
-X_test1 = scaling.transform(X_test)
-LR = LogisticRegression().fit(X_train1,y_train)
-yhat = LR.predict(X_test1)
-X_test_results=X_test
-print("linear",metrics.accuracy_score(y_test, yhat))
-
-svm = SVC(kernel='linear')
-svm.fit(X_train1, y_train)
-y_pred=svm.predict(X_test1)
-
-
-
-
-print("linear Accuracy:",metrics.accuracy_score(y_test, y_pred))
-
-svm = SVC(kernel='poly')
-svm.fit(X_train, y_train)
-y_pred=svm.predict(X_test1)
-
-print("poly Accuracy:",metrics.accuracy_score(y_test, y_pred))
-
-svm = SVC(kernel='sigmoid')
-svm.fit(X_train1, y_train)
-y_pred=svm.predict(X_test1)
-print("sigmoid Accuracy:",metrics.accuracy_score(y_test, y_pred))
-
-svm = SVC(kernel='rbf')
-svm.fit(X_train1, y_train)
-y_pred=svm.predict(X_test1)
-print("rbf Accuracy:",metrics.accuracy_score(y_test, y_pred))
-
-clf = DecisionTreeClassifier(criterion="entropy")
-clf = clf.fit(X_train,y_train)
-y_pred = clf.predict(X_test)
-print("Accuracy Decision Tree (entropy) : ",metrics.accuracy_score(y_test, y_pred))
-
-#X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
-clf = DecisionTreeClassifier(criterion="gini")
-clf = clf.fit(X_train,y_train)
-y_pred = clf.predict(X_test)
-print("Accuracy DT (GINI):",metrics.accuracy_score(y_test, y_pred))
 
 from sklearn.ensemble import RandomForestClassifier
 forest_clf = RandomForestClassifier(n_estimators=150)
