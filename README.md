@@ -1,6 +1,6 @@
 **Non-Intrusive-Load-Monitoring** 
 
-This project tells us about the state of our electronic device if it's **ON** or **OFF**
+This project tells us about the state of our electronic device if it's **ON** or **OFF**, I have used Random forest for classification purpose and got 95% accurate results.
 
 
 
