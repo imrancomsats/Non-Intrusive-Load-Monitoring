@@ -4,7 +4,7 @@ This project tells us about the state of our electronic device if it's **ON** or
 
 
 
-This is how our Data looks like, We are going to predict the state of Appliance name. "Fridge" shows the fridge is **ON** otherwise it's **OFF**
+This is how our data looks like, We are going to predict the state of appliance name column in given data. "Fridge" in appliance name shows the fridge is **ON** otherwise it's **OFF**
 
 ![train head](https://user-images.githubusercontent.com/79520075/147036576-b89f5edc-da22-4798-ba94-017ad8e6ff4c.PNG)
 
